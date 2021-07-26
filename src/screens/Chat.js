@@ -1,5 +1,5 @@
 import '../App.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css"
 import {
   MainContainer,
@@ -9,7 +9,6 @@ import {
   MessageInput,
   ConversationHeader,
   Avatar,
-  Loader,
 } from "@chatscope/chat-ui-kit-react"
 import avatarIcon from '../assets/avatar.png'
 import loadingIcon from '../assets/loading.gif'
@@ -19,12 +18,11 @@ import { STATE, STATE_MESSAGE } from '../utils/Constant'
 
 function Chat(props) {
     const [ foundUser, setFoundUser ] = useState(false)
-    const { name, socket } = props
+    const { socket } = props
     const [ messages, setMessages ] = useState([])
     const [ targetId, setTargetId ] = useState("")
     const [ targetName, setTargetName ] = useState("")
     const [ userState, setUserState ] = useState(STATE.CONNECTED)
-    const messageInputRef = useRef(null)
 
     const getUserState = () => {
         switch(userState){
