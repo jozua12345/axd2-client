@@ -7,11 +7,12 @@ function App() {
   const [home, setHome] = useState(true)
   const [name, setName] = useState("")
   const [socket, setSocket] = useState(undefined)
+  const { REACT_APP_SERVER_URL } = process.env
 
   const onLetsGo = () => {
     const _name = prompt('Please enter a name')
     setName(_name)
-    const _socket = io('http://localhost:3000', {
+    const _socket = io(REACT_APP_SERVER_URL, {
       query: {
         'name': _name
       }

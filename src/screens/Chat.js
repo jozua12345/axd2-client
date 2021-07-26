@@ -40,7 +40,6 @@ function Chat(props) {
     }
 
     const handleSend = (message:MessageContent<TextContent>) => {
-        //addDataIntoCache('messages', 'https://localhost:3000', message)
         if (foundUser){
             setMessages([...messages, parseMessage(message, 'outgoing')])
             socket.emit('send', message, targetId)
