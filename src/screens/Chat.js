@@ -66,18 +66,6 @@ function Chat(props) {
     }
 
 
-    /*
-    const handleDisconnect = () => {
-        alert('D')
-        console.log('WD')
-        if (foundUser) {
-            socket.emit('state', STATE.DISCONNECTED, targetId)
-        }else{
-            socket.emit('dc', socket)
-        }
-        socket.disconnect()
-    }*/
-
     // component did update
     useEffect(() => {
         socket.on('pairing', (target) => {
@@ -92,19 +80,6 @@ function Chat(props) {
             setUserState(state)
         })
     })
-
-    /*
-    useEffect(() => {
-        console.log('OI')
-        window.addEventListener('onbeforeunload', handleDisconnect);
-        // component will unmount
-        return () => {
-            alert("OIOI ")
-            window.removeEventListener('onbeforeunload', handleDisconnect);
-        }
-    }, [])*/
-
-
 
     return (
         <div style={{ position: "relative", height: "100vh" }}>
