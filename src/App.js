@@ -18,6 +18,7 @@ function App() {
         'name': _name
       }
     })
+    console.log(socket)
     setSocket(_socket)
     setHome(false)
   }
