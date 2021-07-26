@@ -18,6 +18,10 @@ function App() {
         'name': _name
       }
     })
+    
+    _socket.io.on("error", (error) => {
+      console.log(error)
+    })
     console.log(_socket)
     setSocket(_socket)
     setHome(false)
