@@ -13,12 +13,12 @@ function App() {
     const _name = prompt('Please enter a name')
     setName(_name)
 
-    const _socket = io(REACT_APP_SERVER_URL, {
+    const _socket = io('asdsa', {
       query: {
         'name': _name
       }
     })
-    console.log(socket)
+    console.log(_socket)
     setSocket(_socket)
     setHome(false)
   }
