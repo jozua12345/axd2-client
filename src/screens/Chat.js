@@ -79,7 +79,7 @@ function Chat(props) {
     })
 
     return (
-        <div style={{ position: "relative", height: "100vh" }}>
+        <div style={{ height: "100vh" }}>
             <MainContainer>
                 <ChatContainer>
                     <ConversationHeader>

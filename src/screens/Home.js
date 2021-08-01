@@ -17,7 +17,7 @@ function Home(props) {
   const { onClick } = props
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
             Bored in lectures. Talk to someone.
@@ -31,7 +31,7 @@ function Home(props) {
         >
          Let's Go
         </a>
-      </header>
+      </div>
     </div>
   );
 }

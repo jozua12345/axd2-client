@@ -11,6 +11,9 @@ function App() {
 
   const onLetsGo = () => {
     const _name = prompt('Please enter a name')
+    if (_name === null || _name ==='') {
+      return
+    }
     setName(_name)
 
     const _socket = io(REACT_APP_SERVER_URL, {
