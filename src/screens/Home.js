@@ -1,6 +1,8 @@
 import logo from '../assets/logo.svg';
 import '../App.css';
 
+const HEIGHT = window.innerHeight
+
 const subTextStyle = {
     fontSize: '12px',
     marginTop: '-10px'
@@ -13,13 +15,15 @@ const buttonStyle = {
     textDecoration: 'underline'
 }
 
-const HEIGHT = window.innerHeight
+const fullScreenStyle = {
+  height: HEIGHT,
+}
 
 function Home(props) {
   const { onClick } = props
   return (
-    <div className="App" style={{height: HEIGHT}}>
-      <div className="App-header">
+    <div className="App">
+      <div className="App-header" style={fullScreenStyle}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
             Bored in lectures. Talk to someone.
