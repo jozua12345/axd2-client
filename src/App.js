@@ -19,7 +19,8 @@ function App() {
     const _socket = io(REACT_APP_SERVER_URL, {
       query: {
         'name': _name
-      }
+      },
+      transports: ['websocket', 'polling', 'flashsocket'],
     })
     setSocket(_socket)
     setHome(false)
