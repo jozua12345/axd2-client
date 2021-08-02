@@ -13,10 +13,12 @@ const buttonStyle = {
     textDecoration: 'underline'
 }
 
+const HEIGHT = window.innerHeight
+
 function Home(props) {
   const { onClick } = props
   return (
-    <div className="App">
+    <div className="App" style={{height: HEIGHT}}>
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
