@@ -15,6 +15,7 @@ import loadingIcon from '../assets/loading.gif'
 import { parseMessage } from '../utils/Communication'
 import { STATE, STATE_MESSAGE } from '../utils/Constant'
 
+const HEIGHT = window.innerHeight
 
 function Chat(props) {
     const [ foundUser, setFoundUser ] = useState(false)
@@ -79,7 +80,7 @@ function Chat(props) {
     })
 
     return (
-        <div style={{height: window.innerHeight }}>
+        <div style={{height: HEIGHT }}>
             <MainContainer>
                 <ChatContainer>
                     <ConversationHeader>
